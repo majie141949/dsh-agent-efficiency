@@ -1,0 +1,6 @@
+- insert:
+    - id: agent-efficiency
+      name: dsh-agent-efficiency
+      config:
+        enabled: true
+        runtimeFeedback: true
