@@ -18,19 +18,19 @@
 
 ### 给其他用户安装
 
-分享 `dsh-agent-efficiency-0.1.3.tgz` 安装包即可，不需要分享源码目录、账号、API Key 或本机配置。安装包已包含编译产物，不需要用户构建。它是 DeepSeek Harness 插件，不能作为 ChatGPT、Codex 或浏览器插件安装。
+在线安装（推荐）：源码仓库 `https://github.com/majie141949/dsh-agent-efficiency` 已公开，仓库根目录就是插件包，可直接按地址安装，无需先下载文件。
 
-需要支持 bundle 插件的 DeepSeek Harness，最低声明版本为 `0.2.1-rc.5`；目前已在该版本的 macOS 宿主实测。其他系统和更高宿主版本尚未实跑，不能承诺所有版本兼容。用户继续使用自己的模型配置，本插件不提供模型服务或额度。
+桌面版：进入「插件扩展 → 添加插件 → 安装第三方插件」，在「包名或地址」里填 `github:majie141949/dsh-agent-efficiency`，安装后确认 `dsh-agent-efficiency` 已启用。
 
-桌面版：进入「插件扩展 → 添加插件 → 安装第三方插件」，在「包名或地址」中输入下载后的 `.tgz` 文件绝对路径，点击安装，然后确认 `dsh-agent-efficiency` 已启用、组件显示「运行中」。安装包无需解压。新建会话使用，避免旧会话中残留的规则影响判断。
-
-独立命令行版：在安装包所在目录执行：
+独立命令行版：
 
 ```sh
-dsh plugin --profile headless add ./dsh-agent-efficiency-0.1.3.tgz
+dsh plugin --profile headless add github:majie141949/dsh-agent-efficiency
 ```
 
-桌面版由应用独占管理插件，`dsh plugin --profile desktop add` 不受支持。尚未发布到公共插件市场或 npm，不能直接按包名在线安装；目前通过分享安装包分发。许可沿用本项目的 `LICENSE` 与 `LICENSE.details`，两份文件随包附带。
+离线安装：分享 `dsh-agent-efficiency-0.1.3.tgz`，桌面端在同一个输入框里填该文件的绝对路径，或命令行执行 `dsh plugin --profile headless add ./dsh-agent-efficiency-0.1.3.tgz`。安装包已含编译产物，不需要构建，也不需要分享源码目录、账号或 API Key。
+
+需要支持 bundle 插件的 DeepSeek Harness，最低声明版本为 `0.2.1-rc.5`；目前只在该版本的 macOS 宿主实测，其他系统与更高宿主版本尚未实跑。桌面版由应用独占管理插件，`dsh plugin --profile desktop add` 不受支持，改走插件面板。安装包的许可沿用 `LICENSE` 与 `LICENSE.details`，含禁止商业二次开发的附加条款。
 
 ### 开发者构建
 
