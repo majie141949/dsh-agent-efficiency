@@ -28,7 +28,7 @@
 dsh plugin --profile headless add github:majie141949/dsh-agent-efficiency
 ```
 
-离线安装：分享 `dsh-agent-efficiency-0.1.3.tgz`，桌面端在同一个输入框里填该文件的绝对路径，或命令行执行 `dsh plugin --profile headless add ./dsh-agent-efficiency-0.1.3.tgz`。安装包已含编译产物，不需要构建，也不需要分享源码目录、账号或 API Key。
+离线安装：分享 `dsh-agent-efficiency-0.1.4.tgz`，桌面端在同一个输入框里填该文件的绝对路径，或命令行执行 `dsh plugin --profile headless add ./dsh-agent-efficiency-0.1.4.tgz`。安装包已含编译产物，不需要构建，也不需要分享源码目录、账号或 API Key。
 
 需要支持 bundle 插件的 DeepSeek Harness，最低声明版本为 `0.2.1-rc.5`；目前只在该版本的 macOS 宿主实测，其他系统与更高宿主版本尚未实跑。桌面版由应用独占管理插件，`dsh plugin --profile desktop add` 不受支持，改走插件面板。安装包的许可沿用 `LICENSE` 与 `LICENSE.details`，含禁止商业二次开发的附加条款。
 
@@ -38,7 +38,7 @@ dsh plugin --profile headless add github:majie141949/dsh-agent-efficiency
 
 ```sh
 pnpm --filter dsh-agent-efficiency build
-pnpm --dir packages/agent-efficiency pack --out ../../dist/plugins/dsh-agent-efficiency-0.1.3.tgz
+pnpm --dir packages/agent-efficiency pack --out ../../dist/plugins/dsh-agent-efficiency-0.1.4.tgz
 ```
 
 本机开发也可在桌面安装界面输入构建后的插件目录绝对路径；该方式会链接源码目录，不能把这个本机路径发给其他用户作为安装地址。
